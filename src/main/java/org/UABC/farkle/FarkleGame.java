@@ -6,7 +6,7 @@ import  java.util.List;
 public class FarkleGame {
     private ArrayList<Jugador> jugadores;
     private ArrayList<Dado> dadosMatch;
-    private CalculadoraDePuntos Calculadora;
+    private CalculadoraDePuntos calculadora;
     private  int turnNow;
 
     public ArrayList<Dado> getDadosMatch() {
@@ -23,7 +23,7 @@ public class FarkleGame {
     public FarkleGame(List<String> namePlayers, boolean oneplayer){
         jugadores=new ArrayList<>();
         dadosMatch=new ArrayList<>();
-        Calculadora= new CalculadoraDePuntos();
+        calculadora= new CalculadoraDePuntos();
         //inician dados
         for(int i=0;i<6;i++){
             dadosMatch.add(new Dado(6));
@@ -44,7 +44,7 @@ public class FarkleGame {
         .forEach(Dado::lanzar);
         }
         public int evaluarSeleccion(ArrayList<Dado>seleccionados){
-        return Calculadora.evaluarTiro(seleccionados);
+        return calculadora.evaluarTiro(seleccionados);
         }
 
     public void siguienteTurno() {

@@ -121,7 +121,7 @@ public class HelloController {
                 actual.addPTurno(puntosSeleccionados);
                 actual.savePturno();
 
-                int PUNTOS_PARA_GANAR = 2000;
+                int PUNTOS_PARA_GANAR = 10000;
 
                 if (actual.getpTotal() >= PUNTOS_PARA_GANAR) {
                     jugador1.setText(juego.getJugadores().get(0).getNombre() + ": " + juego.getJugadores().get(0).getpTotal() + " puntos");
