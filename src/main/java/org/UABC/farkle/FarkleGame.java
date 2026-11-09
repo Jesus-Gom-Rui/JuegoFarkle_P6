@@ -33,7 +33,7 @@ public class FarkleGame {
             jugadores.add(new Jugador(nombre,true));
         }
         if(oneplayer||jugadores.size()==1) {
-            jugadores.add(new Jugador("playerBot", false));
+            jugadores.add(new Jugador("IA", false));
         }
         turnNow=0;
         }
